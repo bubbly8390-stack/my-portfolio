@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>최혜연 포트폴리오</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 상단 메뉴 -->
+  <header>
+    <nav class="nav">
+      <h1 class="logo">CHOI HYEYEON</h1>
+        <ul class="menu">
+        <li>
+          <a href="#intro">소개</a>
+        </li>
+        <li>
+          <a href="#work">일상</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 소개 -->
+    <section id="intro">
+
+      <p class="hello">HELLO, I'M</p>
+
+      <h2>최혜연</h2>
+
+      <p class="lead">
+        웹 만드는것에 도전하고 있습니다. <br>
+      </p>
+
+     <div class="profile-card">
+
+  <div class="profile-inner">
+
+    <!-- 앞면 사진 -->
+    <div class="profile-front">
+      <img src="chy.jpg" alt="첫 번째 프로필 사진">
+    </div>
+
+    <!-- 뒷면 사진 -->
+    <div class="profile-back">
+      <img src="chy1.jpg" alt="두 번째 프로필 사진">
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- 작업 -->
+    <section id="work">
+      <p class="section-title">MY WORK</p>
+      <h2>나 누구?</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="number">01</span>
+          <h3>ME?</h3>
+          <p>
+            우당탕탕 최혜연입니당.
+            INFP 소심 하고 조금 엉뚱하지만
+            모든걸 열심히 해보고려고 노력 중입니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="number">02</span>
+          <h3>좋아하는 것들</h3>
+          <p>
+            영화보기, 게임하기, 음악만들기, 우리집 콩(강아지)싸우기,
+            다이어트 못함(해년마다 갱신중), 보라색, 노란색 좋아하는색.
+          </p>
+
+        </article>
+
+        <article class="card">
+
+          <span class="number">03</span>
+
+          <h3>특별한직업</h3>
+
+          <p>남의 인생에 관여하여 감나라 배나라 하는 직업.
+            
+          </p>
+
+        </article>
+      </div>
+
+    </section>
+
+    <!-- 마음의 소리 -->
+    <section id="contact">
+
+      <p class="section-title">CONTACT</p>
+
+      <h2>마음의 소리</h2>
+
+      <p class="contact-text">
+        사연을 받고 있습니다. 마음속이야기를 남겨주시면 음악으로 
+        만들어 들려요.
+      </p>
+
+      <form action="/contact" method="post">
+
+        <fieldset>
+
+          <legend>사연남기기</legend>
+          <label for="name">
+            이름
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="이름을 입력해주세요"
+            required
+          >
+
+          <label for="message">
+            내용
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="사연을 입력해주세요"
+          ></textarea>
+
+          <button type="submit">
+            보내기
+          </button>
+
+        </fieldset>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- 하단 -->
+  <footer>
+
+    <p>
+      © 2026 최혜연 PORTFOLIO
+    </p>
+\  </footer>
+</body>
+</html>

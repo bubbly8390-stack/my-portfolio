@@ -1,0 +1,657 @@
+ /* ========================================
+   전체 기본 설정
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  background-color: #fff4bd;
+
+  color: #3e3347;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   상단 메뉴
+======================================== */
+
+header {
+  width: 100%;
+
+  background-color: #76549b;
+
+  padding: 0 8%;
+}
+
+.nav {
+  width: 100%;
+  max-width: 1100px;
+
+  min-height: 80px;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* 왼쪽 이름 */
+
+.logo {
+  color: #ffe36e;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+/* 메뉴 */
+
+.menu {
+  display: flex;
+
+  gap: 35px;
+
+  list-style: none;
+}
+
+.menu a {
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #ffe36e;
+}
+
+
+/* ========================================
+   메인
+======================================== */
+
+main {
+  width: 100%;
+}
+
+
+/* ========================================
+   소개
+======================================== */
+
+#intro {
+  width: 100%;
+
+  min-height: 650px;
+
+  padding: 80px 10%;
+
+  background-color: #fff4bd;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* HELLO, I'M */
+
+.hello {
+  color: #8a64ad;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 8px;
+}
+
+
+/* 최혜연 */
+
+#intro h2 {
+  color: #69458d;
+
+  font-size: 60px;
+
+  margin-bottom: 18px;
+}
+
+
+/* 소개 글 */
+
+.lead {
+  color: #5f5365;
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+}
+
+
+/* ========================================
+   돌아가는 프로필 사진
+======================================== */
+
+.profile-card {
+  width: 290px;
+  height: 290px;
+
+  perspective: 1000px;
+}
+
+
+/* 실제로 회전하는 부분 */
+
+.profile-inner {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.8s;
+
+  transform-style: preserve-3d;
+}
+
+
+/* 마우스 올리면 뒤집기 */
+
+.profile-card:hover .profile-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* 앞면 + 뒷면 */
+
+.profile-front,
+.profile-back {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* 두 번째 사진 */
+
+.profile-back {
+  transform: rotateY(180deg);
+}
+
+
+/* 두 사진 공통 */
+
+.profile-front img,
+.profile-back img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: 10px solid #d9c0ef;
+
+  background-color: white;
+
+  box-shadow: 0 12px 30px rgba(86, 55, 110, 0.20);
+}
+
+
+/* ========================================
+   나 누구?
+======================================== */
+
+#work {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 100px 7%;
+
+  background-color: white;
+
+  text-align: center;
+}
+
+
+/* ABOUT ME */
+
+.section-title {
+  color: #d0a600;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 8px;
+}
+
+
+/* 나 누구? */
+
+#work h2 {
+  color: #69458d;
+
+  font-size: 44px;
+
+  margin-bottom: 55px;
+}
+
+
+/* ========================================
+   카드 3개
+======================================== */
+
+.cards {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 25px;
+}
+
+
+/* 카드 */
+
+.card {
+  flex: 1;
+
+  min-height: 270px;
+
+  padding: 35px 30px;
+
+  background-color: #f4eafb;
+
+  border: 2px solid #f1c94f;
+
+  border-radius: 20px;
+
+  text-align: left;
+
+  box-shadow: 0 8px 20px rgba(79, 54, 99, 0.08);
+
+  transition: 0.3s;
+}
+
+
+/* 카드 마우스 효과 */
+
+.card:hover {
+  transform: translateY(-8px);
+
+  background-color: #fff5c7;
+
+  box-shadow: 0 15px 30px rgba(79, 54, 99, 0.15);
+}
+
+
+/* 01 02 03 */
+
+.number {
+  color: #d0a600;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* 카드 제목 */
+
+.card h3 {
+  color: #69458d;
+
+  font-size: 22px;
+
+  margin: 18px 0;
+}
+
+
+/* 카드 내용 */
+
+.card p {
+  color: #5f5664;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   마음의 소리
+======================================== */
+
+#contact {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 100px 8%;
+
+  background-color: #eee1f7;
+
+  text-align: center;
+}
+
+
+/* 마음의 소리 제목 */
+
+#contact h2 {
+  color: #69458d;
+
+  font-size: 44px;
+
+  margin-bottom: 15px;
+}
+
+
+/* 마음의 소리 설명 */
+
+.contact-text {
+  color: #685e6d;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+}
+
+
+/* ========================================
+   사연 입력 폼
+======================================== */
+
+form {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  text-align: left;
+}
+
+fieldset {
+  padding: 40px;
+
+  background-color: white;
+
+  border: 2px solid #d7b9ec;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(80, 55, 100, 0.10);
+}
+
+
+/* 사연 남기기 */
+
+legend {
+  padding: 0 12px;
+
+  color: #69458d;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* 이름 / 내용 */
+
+label {
+  display: block;
+
+  margin-top: 20px;
+  margin-bottom: 8px;
+
+  color: #594760;
+
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+/* 입력창 */
+
+input,
+textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  background-color: white;
+
+  border: 1px solid #d6cadc;
+
+  border-radius: 10px;
+
+  color: #3e3347;
+
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* 입력창 클릭 */
+
+input:focus,
+textarea:focus {
+  border: 2px solid #8a64ad;
+}
+
+
+/* ========================================
+   보내기 버튼
+======================================== */
+
+button {
+  width: 100%;
+
+  margin-top: 28px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background-color: #76549b;
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* 버튼 마우스 */
+
+button:hover {
+  background-color: #f0d154;
+
+  color: #45354d;
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  width: 100%;
+
+  padding: 35px;
+
+  background-color: #60427d;
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 15px;
+}
+
+
+/* ========================================
+   태블릿 / 휴대폰
+======================================== */
+
+@media (max-width: 768px) {
+
+  /* 상단 메뉴 */
+
+  .nav {
+    padding: 20px 0;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .menu {
+    gap: 20px;
+  }
+
+  .menu a {
+    font-size: 15px;
+  }
+
+
+  /* 소개 */
+
+  #intro {
+    min-height: 600px;
+
+    padding: 60px 20px;
+  }
+
+  #intro h2 {
+    font-size: 45px;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+
+  /* 프로필 사진 */
+
+  .profile-card {
+    width: 230px;
+    height: 230px;
+  }
+
+
+  /* 나 누구 */
+
+  #work {
+    width: 94%;
+
+    padding: 70px 25px;
+  }
+
+  #work h2 {
+    font-size: 36px;
+  }
+
+
+  /* 카드 */
+
+  .cards {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+
+    min-height: auto;
+  }
+
+
+  /* 마음의 소리 */
+
+  #contact {
+    width: 94%;
+
+    padding: 70px 20px;
+  }
+
+  #contact h2 {
+    font-size: 36px;
+  }
+
+  .contact-text {
+    font-size: 16px;
+  }
+
+
+  /* 사연 폼 */
+
+  form {
+    width: 100%;
+  }
+
+  fieldset {
+    padding: 25px;
+  }
+
+}
